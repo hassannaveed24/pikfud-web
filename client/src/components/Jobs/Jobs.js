@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useRef } from "react";
 import georgia from "../../assets/Jobs/georgia.svg";
 import Rectangle30 from "../../assets/Jobs/Rectangle30.png";
 import { FaCaretDown } from "react-icons/fa";
@@ -11,6 +10,16 @@ const Jobs = () => {
   const routeChange = () => {
     let path = "/jobpost";
     history.push(path);
+    window.scroll(0, 0);
+  };
+
+  const openingRef = useRef(null);
+  const executeScrolltoOpening = () => {
+    openingRef.current.scrollIntoView();
+  };
+  const ourRef = useRef(null);
+  const scrolltoOur = () => {
+    ourRef.current.scrollIntoView();
   };
   return (
     <>
@@ -20,14 +29,21 @@ const Jobs = () => {
             Help us become the first zero food waste generation. Come work at
             Pikfud!
           </h1>
-          <div className="d-flex flex-column align-items-center ">
-            <button className="Jobs__header__button">
+          <div className=" Jobs__header_button_caret ">
+            <button
+              className="Jobs__header__button"
+              onClick={executeScrolltoOpening}
+            >
               VIEW OPEN POSITIONS
             </button>
-            <FaCaretDown color="white" className="mt-3 caret" />
+            <FaCaretDown
+              color="white"
+              className="mt-3 caret"
+              onClick={scrolltoOur}
+            />
           </div>
         </div>
-        <div className="Jobs__content">
+        <div className="Jobs__content" ref={ourRef}>
           <h1>Who are we and who are you?</h1>
           <h2>
             Here at Pikfud we're a diverse bunch but what brings us all together
@@ -56,7 +72,7 @@ const Jobs = () => {
           </div>
           <img src={Rectangle30} />
         </div>
-        <div className="JobsOpening">
+        <div className="JobsOpening" ref={openingRef}>
           <h1>Current Job Openings</h1>
           <Table hover>
             <tbody>

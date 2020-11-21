@@ -34,14 +34,21 @@ const Header = () => {
   }, [isNavVisible]);
 
   const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    const _visible = prevScrollpos > currentScrollPos;
+    if (window.pageYOffset <= 10) {
+      setVisible(true);
+      console.log(window.pageYOffset);
+    } else {
+      const currentScrollPos = window.pageYOffset;
+      const _visible = prevScrollpos >= currentScrollPos;
 
-    setPrevScrollpos(currentScrollPos);
-    setVisible(_visible);
+      setPrevScrollpos(currentScrollPos);
+      setVisible(_visible);
+    }
   };
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
+    window.scrollTo(0, 0);
+    setVisible(true);
   };
   return (
     <div>
@@ -80,6 +87,7 @@ const Header = () => {
                     }
                     onClick={() => {
                       window.scrollTo(0, 0);
+                      setVisible(true);
                     }}
                     // onClick={() => setSelected(index)}
                   >

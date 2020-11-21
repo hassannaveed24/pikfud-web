@@ -15,12 +15,36 @@ const Posts = () => {
           <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
         </div>
 
-        <div className="Blog__post"></div>
-        <div className="Blog__post"></div>
-        <div className="Blog__post"></div>
-        <div className="Blog__post"></div>
-        <div className="Blog__post"></div>
-        <div className="Blog__post"></div>
+        <div className="Blog__post">
+          <h1>TIPS AND TRICKS</h1>
+          <h2>How to motivate your restaurant staff to waste less food</h2>
+          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+        </div>
+        <div className="Blog__post">
+          <h1>TIPS AND TRICKS</h1>
+          <h2>How to motivate your restaurant staff to waste less food</h2>
+          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+        </div>
+        <div className="Blog__post">
+          <h1>TIPS AND TRICKS</h1>
+          <h2>How to motivate your restaurant staff to waste less food</h2>
+          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+        </div>
+        <div className="Blog__post">
+          <h1>TIPS AND TRICKS</h1>
+          <h2>How to motivate your restaurant staff to waste less food</h2>
+          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+        </div>
+        <div className="Blog__post">
+          <h1>TIPS AND TRICKS</h1>
+          <h2>How to motivate your restaurant staff to waste less food</h2>
+          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+        </div>
+        <div className="Blog__post">
+          <h1>TIPS AND TRICKS</h1>
+          <h2>How to motivate your restaurant staff to waste less food</h2>
+          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+        </div>
       </div>
     </div>
   );

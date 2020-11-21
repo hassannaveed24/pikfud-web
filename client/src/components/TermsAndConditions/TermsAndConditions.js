@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
           <h1>1. General Description </h1>
           <br />
           <br />
-          <body>
+          <h4>
             <h2>1.1 Introduction</h2>
             <p className="legalMyBody">
               These User Terms and Conditions (this “Agreement”), is a legal
@@ -27,12 +27,12 @@ const TermsAndConditions = () => {
               and agree to be bound by each of its terms. Website, you accept
               this Agreement and agree to be bound.
             </p>
-          </body>
+          </h4>
           <br />
           <h1>2. General Description </h1>
           <br />
           <br />
-          <body>
+          <h4>
             <h2>1.1 Introduction</h2>
             <p className="legalMyBody">
               These User Terms and Conditions (this “Agreement”), is a legal
@@ -55,7 +55,7 @@ const TermsAndConditions = () => {
               located when the Application is open (the Merchants closest to you
               is shown first in the list).
             </p>
-          </body>
+          </h4>
         </div>
       </div>
     </>
