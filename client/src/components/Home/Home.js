@@ -1,6 +1,6 @@
 import React from "react";
 
-import homePic from "../../assets/Home/homePic.png";
+import homePic from "../../assets/Home/homepage.png";
 import appDownload from "../../assets/Home/appDownload.png";
 import rescueFood from "../../assets/Home/rescueFood.png";
 import pickIt from "../../assets/Home/pickIt.png";

@@ -2,6 +2,9 @@ import React from "react";
 import recycle from "../../assets/Business/recycle.png";
 import support from "../../assets/Business/support.png";
 import coin from "../../assets/Business/coin.png";
+import business1 from "../../assets/Business/business1.png";
+import business2 from "../../assets/Business/business2.png";
+import business3 from "../../assets/Business/business3.png";
 
 const Business = () => {
   return (
@@ -71,7 +74,7 @@ const Business = () => {
                 <br />- Pick up information
               </h2>
             </div>
-            <div className="Process__image-1" />
+            <img src={business1} className="Process__image-1" />
           </div>
           <div className="Process__step">
             <div className="Process__counter-2">2</div>
@@ -93,7 +96,7 @@ const Business = () => {
                 <br />- Pick up information
               </h2>
             </div>
-            <div className="Process__image-2" />
+            <img src={business2} className="Process__image-2" />
           </div>
           <div className="Process__step">
             <div className="Process__counter-3">3</div>
@@ -115,7 +118,7 @@ const Business = () => {
                 <br />- Pick up information
               </h2>
             </div>
-            <div className="Process__image-3" />
+            <img src={business3} className="Process__image-3" />
           </div>
           {/* <div className="Process__step">
             <div className="Process__step-content">

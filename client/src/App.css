@@ -167,6 +167,7 @@ AboutUs \
 .founded {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 5rem 0;
 }
 /* 
@@ -411,7 +412,7 @@ Business
   align-items: flex-start;
   /* margin: 3rem 3rem; */
 
-  margin: 0 3rem;
+  margin: 0 2rem;
   margin-bottom: 3rem;
 }
 .Process__step > div {
@@ -464,7 +465,8 @@ Business
 .Process__image-1 {
   width: 544px;
   height: 612px;
-  background-color: #ff6400;
+
+  object-fit: cover;
   border-radius: 15px;
   /* margin: 0 15px; */
 }
@@ -487,6 +489,7 @@ Business
   /* align-items: flex-start; */
   max-width: 590px;
   /* width: 100vw; */
+  margin: 0;
 }
 .Process__step-content > h2 {
   margin: 50px 0;
@@ -863,8 +866,7 @@ HomeScreen1
 ------------------ */
 
 .HomeScreen1-homePic {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
 }
 
 .HomeScreen1-title {
@@ -1288,16 +1290,16 @@ HomeScreen2
     height: 980px;
   } */
   .Process__image-1 {
-    width: 344px;
-    height: 412px;
+    width: 450px;
+    height: 500px;
   }
   .Process__image-2 {
-    width: 344px;
-    height: 412px;
+    width: 450px;
+    height: 500px;
   }
   .Process__image-3 {
-    width: 344px;
-    height: 412px;
+    width: 450px;
+    height: 506px;
   }
   .wasteProblem {
     flex-direction: column;
@@ -1345,6 +1347,7 @@ HomeScreen2
   .Process__step {
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
   }
   .Blog__filters {
     flex-direction: column;
@@ -1736,7 +1739,7 @@ HomeScreen2
   } */
   .Process__step-content {
     padding-right: 10%;
-    padding-left: 10%;
+    /* padding-left: 10%; */
   }
   .Process__step {
     width: 100vw;
@@ -1752,13 +1755,19 @@ HomeScreen2
     margin-left: 10%;
   }
   .Process__image-1 {
-    width: 250px;
+    width: 350px;
+    height: 394px;
+    margin: auto;
   }
   .Process__image-2 {
-    width: 250px;
+    width: 350px;
+    height: 394px;
+    margin: auto;
   }
   .Process__image-3 {
-    width: 250px;
+    width: 350px;
+    height: 394px;
+    margin: auto;
   }
   .legalMain {
     padding: 10px 20px;

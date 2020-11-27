@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfa75afd.chunk.css",
-    "main.js": "/static/js/main.00766355.chunk.js",
-    "main.js.map": "/static/js/main.00766355.chunk.js.map",
+    "main.css": "/static/css/main.060b787a.chunk.css",
+    "main.js": "/static/js/main.990e2ede.chunk.js",
+    "main.js.map": "/static/js/main.990e2ede.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b08a4acc.js",
     "runtime-main.js.map": "/static/js/runtime-main.b08a4acc.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/static/css/2.20aa2d7b.chunk.css",
@@ -12,13 +12,22 @@
     "static/js/3.a11459cb.chunk.js.map": "/static/js/3.a11459cb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.cfa75afd.chunk.css.map": "/static/css/main.cfa75afd.chunk.css.map",
+    "static/css/main.060b787a.chunk.css.map": "/static/css/main.060b787a.chunk.css.map",
     "static/js/2.21343222.chunk.js.LICENSE.txt": "/static/js/2.21343222.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/softwareDeveloper.f29e29ba.png",
+    "static/media/about-breadcrumb2.6a62bcc0.png": "/static/media/about-breadcrumb2.6a62bcc0.png",
+    "static/media/about-problem.5b988ac7.png": "/static/media/about-problem.5b988ac7.png",
+    "static/media/about-solution.c2c473b2.png": "/static/media/about-solution.c2c473b2.png",
     "static/media/appDownload.5be2402e.png": "/static/media/appDownload.5be2402e.png",
+    "static/media/business1.08ba369f.png": "/static/media/business1.08ba369f.png",
+    "static/media/business2.6930dd6e.png": "/static/media/business2.6930dd6e.png",
+    "static/media/business3.a633c425.png": "/static/media/business3.a633c425.png",
+    "static/media/foundedImg.0f5b9fd5.png": "/static/media/foundedImg.0f5b9fd5.png",
     "static/media/georgia.570c66d3.svg": "/static/media/georgia.570c66d3.svg",
+    "static/media/homepage.8d0dcd42.png": "/static/media/homepage.8d0dcd42.png",
     "static/media/partnerStores.11a47c9b.png": "/static/media/partnerStores.11a47c9b.png",
     "static/media/pickIt.d86a0e60.png": "/static/media/pickIt.d86a0e60.png",
+    "static/media/post.34f00f77.png": "/static/media/post.34f00f77.png",
     "static/media/rescueFood.8e9d5683.png": "/static/media/rescueFood.8e9d5683.png",
     "static/media/wastage.bcb89407.png": "/static/media/wastage.bcb89407.png"
   },
@@ -26,7 +35,7 @@
     "static/js/runtime-main.b08a4acc.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.21343222.chunk.js",
-    "static/css/main.cfa75afd.chunk.css",
-    "static/js/main.00766355.chunk.js"
+    "static/css/main.060b787a.chunk.css",
+    "static/js/main.990e2ede.chunk.js"
   ]
 }

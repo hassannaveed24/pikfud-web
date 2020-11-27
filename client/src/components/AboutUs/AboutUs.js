@@ -1,16 +1,16 @@
 import React from "react";
-import foodWasteProblem from "../../assets/AboutUs/foodWasteProblem.png";
-import solution from "../../assets/AboutUs/solution.png";
+import aboutProblem from "../../assets/AboutUs/about-problem.png";
+import aboutSolution from "../../assets/AboutUs/about-solution.png";
 // import partnersImg from "../../assets/AboutUs/partnersImg.png";
 import foundedImg from "../../assets/AboutUs/foundedImg.png";
-import rectangle from "../../assets/AboutUs/Rectangle.png";
+import aboutBreadcrumb from "../../assets/AboutUs/about-breadcrumb2.png";
 
 const AboutUs = () => {
   return (
     <>
       <div className="AboutUs__Main">
         <img
-          src={rectangle}
+          src={aboutBreadcrumb}
           style={{
             height: "auto",
             width: "100vw",
@@ -19,7 +19,7 @@ const AboutUs = () => {
         />
         <div className="wasteProblem wasteProblem__Uppper ">
           <div>
-            <img className="wasteProblemImgDiv" src={foodWasteProblem} />
+            <img className="wasteProblemImgDiv" src={aboutProblem} />
           </div>
           <div className="wasteProblemTextDiv">
             <h1>The $1.2 trillion food waste problem</h1>
@@ -56,7 +56,7 @@ const AboutUs = () => {
             </body>
           </div>
           <div>
-            <img className="wasteProblemImgDiv" src={solution} />
+            <img className="wasteProblemImgDiv" src={aboutSolution} />
           </div>
         </div>
 
