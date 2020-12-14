@@ -99,7 +99,7 @@ const Jobs = () => {
             <tbody>
               {tableData.map((row, index) => {
                 return (
-                  <tr>
+                  <tr onClick={routeChange}>
                     <td>{row.title}</td>
                     <td>{row.department.title}</td>
                     <td>.{row.city}</td>
@@ -109,42 +109,6 @@ const Jobs = () => {
                   </tr>
                 );
               })}
-              <tr onClick={routeChange}>
-                <td>Senior Product Designer</td>
-                <td>Design </td>
-                <td>
-                  .
-                  <img src={georgia} />
-                  Tbilisi, Georgia
-                </td>
-              </tr>
-              <tr>
-                <td>Fullstack Developer </td>
-                <td>Development </td>
-                <td>
-                  .
-                  <img src={georgia} />
-                  Tbilisi, Georgia
-                </td>
-              </tr>
-              <tr>
-                <td>Head of Sales</td>
-                <td>Sales </td>
-                <td>
-                  .
-                  <img src={georgia} />
-                  Tbilisi, Georgia
-                </td>
-              </tr>
-              <tr>
-                <td>Head of Marketing</td>
-                <td>Marketing</td>
-                <td>
-                  .
-                  <img src={georgia} />
-                  Tbilisi, Georgia
-                </td>
-              </tr>
             </tbody>
           </Table>
         </div>
