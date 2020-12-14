@@ -1,11 +1,31 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import georgia from "../../assets/Jobs/georgia.svg";
 import Rectangle30 from "../../assets/Jobs/Rectangle30.png";
 import { FaCaretDown } from "react-icons/fa";
 import { Table } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+const BASE_URL = "https://pikfudbackend.herokuapp.com/";
 
 const Jobs = () => {
+  useEffect(() => {
+    const getJobs = async () => {
+      try {
+        const jobsData = await axios.get(BASE_URL + "admin/jobs");
+        setTableData(jobsData.data);
+        console.log(jobsData.data);
+      } catch (err) {
+        console.log("getJobs Err", err.message);
+      }
+    };
+    getJobs();
+  }, []);
+  const [tableData, setTableData] = useState([]);
+
+  //  { title: "Senior Product Designer",
+  //    depatment: "Design",
+  //    city: "Georgia" }
+
   const history = useHistory();
   const routeChange = () => {
     let path = "/jobpost";
@@ -74,8 +94,21 @@ const Jobs = () => {
         </div>
         <div className="JobsOpening" ref={openingRef}>
           <h1>Current Job Openings</h1>
+
           <Table hover>
             <tbody>
+              {tableData.map((row, index) => {
+                return (
+                  <tr>
+                    <td>{row.title}</td>
+                    <td>{row.department.title}</td>
+                    <td>.{row.city}</td>
+                    <td>
+                      <img src={BASE_URL + row.image} />
+                    </td>
+                  </tr>
+                );
+              })}
               <tr onClick={routeChange}>
                 <td>Senior Product Designer</td>
                 <td>Design </td>
