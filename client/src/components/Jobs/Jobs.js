@@ -4,14 +4,12 @@ import Rectangle30 from "../../assets/Jobs/Rectangle30.png";
 import { FaCaretDown } from "react-icons/fa";
 import { Table } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
-const BASE_URL = "https://pikfudbackend.herokuapp.com/";
-
+import { instance, baseURL } from "../../utils/server";
 const Jobs = () => {
   useEffect(() => {
     const getJobs = async () => {
       try {
-        const jobsData = await axios.get(BASE_URL + "admin/jobs");
+        const jobsData = await instance.get("/admin/jobs");
         setTableData(jobsData.data);
         console.log(jobsData.data);
       } catch (err) {
@@ -27,8 +25,8 @@ const Jobs = () => {
   //    city: "Georgia" }
 
   const history = useHistory();
-  const routeChange = () => {
-    let path = "/jobpost";
+  const routeChange = (_id) => {
+    let path = "/jobpost?j=" + _id;
     history.push(path);
     window.scroll(0, 0);
   };
@@ -99,12 +97,12 @@ const Jobs = () => {
             <tbody>
               {tableData.map((row, index) => {
                 return (
-                  <tr onClick={routeChange}>
+                  <tr onClick={() => routeChange(row._id)}>
                     <td>{row.title}</td>
                     <td>{row.department.title}</td>
                     <td>.{row.city}</td>
                     <td>
-                      <img src={BASE_URL + row.image} />
+                      <img src={`${baseURL}/${row.image}`} />
                     </td>
                   </tr>
                 );

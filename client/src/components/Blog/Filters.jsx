@@ -1,4 +1,3 @@
-import { FaSearch } from "react-icons/fa";
 import logo from "../../assets/Blog/logo.png";
 
 const Filters = () => (
