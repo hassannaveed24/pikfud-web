@@ -1,70 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback } from "react";
+import { useQuery } from "react-query";
 import { useHistory } from "react-router-dom";
-import { instance, baseURL } from "../../utils/server";
+import { getBlogs, getFormattedDate } from "utils";
+import _ from "lodash";
+import { When } from "react-if";
+import { Loader } from "components/common";
+import classnames from "classnames";
 
 const Posts = () => {
-  const history = useHistory();
-  const routeChange = () => {
-    let path = "/blogpost";
-    history.push(path);
-  };
-  const [blogsData, setBlogsData] = useState({});
-  useEffect(() => {
-    const getBlogs = async () => {
-      try {
-        const res = await instance.get("/admin/blogs");
-        setBlogsData(res.data);
-        console.log(res.data);
-      } catch (err) {
-        console.log("getBlogs Err", err.message);
-      }
-    };
-    getBlogs();
-  }, []);
+    const history = useHistory();
+    const openPost = useCallback((_id) => {
+        window.scrollTo(0, 0);
+        history.push(`/blogpost?p=${_id}`);
+    }, []);
 
-  return (
-    <div className="content-container is-blog">
-      <div className="Blog__posts">
-        <div className="Blog__post" onClick={routeChange}>
-          <h1>{blogsData.title}</h1>
-          <h2>{blogsData.description}</h2>
-          <h3>
-            {blogsData.createdAt} DAYS AGO | {blogsData.author}
-          </h3>
-        </div>
+    const { data, isLoading, error } = useQuery("blogs", getBlogs, { retry: false });
 
-        <div className="Blog__post">
-          <h1>TIPS AND TRICKS</h1>
-          <h2>How to motivate your restaurant staff to waste less food</h2>
-          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
+    return (
+        <div className="content-container is-blog">
+            <div
+                className={classnames("Blog__posts", { "content-min-height": isLoading || error })}
+            >
+                <When condition={isLoading}>
+                    <Loader />
+                </When>
+                <When condition={error}>
+                    <h1>{error?.message}</h1>
+                </When>
+                {_.map(data, ({ _id, title, description, createdAt, author }, index) => {
+                    const formattedDate = getFormattedDate(new Date(createdAt));
+                    return (
+                        <div
+                            key={`blog-post-${index + 1}`}
+                            className="Blog__post"
+                            onClick={() => openPost(_id)}
+                        >
+                            <h1>{title}</h1>
+                            {_.map(description.split("\\"), (paragraph, index) => (
+                                <p key={`blog-description-paragraph-${index + 1}`}>{paragraph}</p>
+                            ))}
+                            <h3>
+                                {formattedDate} | {author}
+                            </h3>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
-        <div className="Blog__post">
-          <h1>TIPS AND TRICKS</h1>
-          <h2>How to motivate your restaurant staff to waste less food</h2>
-          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
-        </div>
-        <div className="Blog__post">
-          <h1>TIPS AND TRICKS</h1>
-          <h2>How to motivate your restaurant staff to waste less food</h2>
-          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
-        </div>
-        <div className="Blog__post">
-          <h1>TIPS AND TRICKS</h1>
-          <h2>How to motivate your restaurant staff to waste less food</h2>
-          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
-        </div>
-        <div className="Blog__post">
-          <h1>TIPS AND TRICKS</h1>
-          <h2>How to motivate your restaurant staff to waste less food</h2>
-          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
-        </div>
-        <div className="Blog__post">
-          <h1>TIPS AND TRICKS</h1>
-          <h2>How to motivate your restaurant staff to waste less food</h2>
-          <h3>4 DAYS AGO | MARIAM GOGOLADZE</h3>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 export default Posts;

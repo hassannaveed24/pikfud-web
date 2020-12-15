@@ -5,14 +5,19 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Layout from "./components/Layout/index";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+
+const queryClient = new QueryClient();
 
 https: ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/" render={(props) => <Layout {...props} />} />
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
+    <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+            <Switch>
+                <Route path="/" render={(props) => <Layout {...props} />} />
+            </Switch>
+        </QueryClientProvider>
+    </BrowserRouter>,
+    document.getElementById("root")
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
