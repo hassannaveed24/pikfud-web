@@ -1,0 +1,7 @@
+.content-min-height {
+    height: calc(100vh - 404px);
+}
+
+.content-min-height.empty {
+    padding-top: 8rem;
+}
