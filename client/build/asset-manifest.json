@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.80b31429.chunk.css",
+    "main.js": "/static/js/main.c75f24a3.chunk.js",
+    "main.js.map": "/static/js/main.c75f24a3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5486ab1a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5486ab1a.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.2b81af6f.chunk.js": "/static/js/2.2b81af6f.chunk.js",
+    "static/js/2.2b81af6f.chunk.js.map": "/static/js/2.2b81af6f.chunk.js.map",
+    "static/js/3.a37c8959.chunk.js": "/static/js/3.a37c8959.chunk.js",
+    "static/js/3.a37c8959.chunk.js.map": "/static/js/3.a37c8959.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.80b31429.chunk.css.map": "/static/css/main.80b31429.chunk.css.map",
+    "static/js/2.2b81af6f.chunk.js.LICENSE.txt": "/static/js/2.2b81af6f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/pizza.7d699ed5.jpg",
+    "static/media/about-breadcrumb2.6a62bcc0.png": "/static/media/about-breadcrumb2.6a62bcc0.png",
+    "static/media/about-problem.5b988ac7.png": "/static/media/about-problem.5b988ac7.png",
+    "static/media/about-solution.c2c473b2.png": "/static/media/about-solution.c2c473b2.png",
+    "static/media/appDownload.5be2402e.png": "/static/media/appDownload.5be2402e.png",
+    "static/media/business1.08ba369f.png": "/static/media/business1.08ba369f.png",
+    "static/media/business2.6930dd6e.png": "/static/media/business2.6930dd6e.png",
+    "static/media/business3.a633c425.png": "/static/media/business3.a633c425.png",
+    "static/media/foundedImg.0f5b9fd5.png": "/static/media/foundedImg.0f5b9fd5.png",
+    "static/media/homepage.8d0dcd42.png": "/static/media/homepage.8d0dcd42.png",
+    "static/media/pickIt.d86a0e60.png": "/static/media/pickIt.d86a0e60.png",
+    "static/media/rescueFood.8e9d5683.png": "/static/media/rescueFood.8e9d5683.png",
+    "static/media/wastage.bcb89407.png": "/static/media/wastage.bcb89407.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5486ab1a.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.2b81af6f.chunk.js",
+    "static/css/main.80b31429.chunk.css",
+    "static/js/main.c75f24a3.chunk.js"
+  ]
+}
