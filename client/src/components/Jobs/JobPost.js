@@ -9,42 +9,44 @@ import classnames from "classnames";
 import _ from "lodash";
 
 const JobPost = () => {
-    let location = useLocation();
+  let location = useLocation();
 
-    const { isLoading, error, data } = useQuery(
-        ["job", { _id: parseQuery(location.search).j }],
-        getJob,
-        {
-            retry: false,
-        }
-    );
+  const { isLoading, error, data } = useQuery(
+    ["job", { _id: parseQuery(location.search).j }],
+    getJob,
+    {
+      retry: false,
+    }
+  );
 
-    return (
-        <div className={classnames({ "content-min-height": isLoading || error })}>
-            <When condition={isLoading}>
-                <Loader />
-            </When>
-            <When condition={error}>
-                <h1>{error?.message}</h1>
-            </When>
-            <When condition={data}>
-                <div className="Job__post">
-                    <div className="Job__post_header">
-                        <img src={`${baseURL}/${data?.image}`} alt="Job" />
-                        <div className="content">
-                            <h1 className="text-capitalize">{data?.title}</h1>
-                            <h2 className="text-capitalize">{data?.city}</h2>
-                        </div>
-                    </div>
-                    <div className="Job__post_content">
-                        {_.map(data?.description?.split(`\\`), (paragraph, index) => (
-                            <p key={`paragraph-${index + 1}`}>{paragraph}</p>
-                        ))}
-                        <button>APPLY NOW</button>
-                    </div>
-                </div>
-            </When>
+  return (
+    <div className={classnames({ "content-min-height": isLoading || error })}>
+      <When condition={isLoading}>
+        <Loader />
+      </When>
+      <When condition={error}>
+        <h1>{error?.message}</h1>
+      </When>
+      <When condition={data}>
+        <div className="Job__post">
+          <div className="Job__post_header">
+            <div className="img-container">
+              <img src={`${baseURL}/${data?.image}`} alt="Job" />
+            </div>
+            <div className="content">
+              <h1 className="text-capitalize">{data?.title}</h1>
+              <h2 className="text-capitalize">{data?.city}</h2>
+            </div>
+          </div>
+          <div className="Job__post_content">
+            {_.map(data?.description?.split(`\n`), (paragraph, index) => (
+              <p key={`paragraph-${index + 1}`}>{paragraph}</p>
+            ))}
+            <button>APPLY NOW</button>
+          </div>
         </div>
-    );
+      </When>
+    </div>
+  );
 };
 export default JobPost;

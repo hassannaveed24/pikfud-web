@@ -34,14 +34,16 @@ const Jobs = () => {
           <div className=" Jobs__header_button_caret ">
             <button
               className="Jobs__header__button"
-              onClick={openingRef?.current?.scrollIntoView}
+              onClick={() => {
+                openingRef?.current?.scrollIntoView();
+              }}
             >
               VIEW OPEN POSITIONS
             </button>
             <FaCaretDown
               color="white"
               className="mt-3 caret"
-              onClick={ourRef?.current?.scrollIntoView}
+              onClick={() => ourRef?.current?.scrollIntoView()}
             />
           </div>
         </div>
@@ -92,11 +94,18 @@ const Jobs = () => {
                     onClick={() => routeChange(job._id)}
                   >
                     <td>{job.title}</td>
-                    <td>{job.department.title}</td>
-                    <td>.{job.city}</td>
-                    <td>
-                      <img src={`${baseURL}/${job.image}`} />
+                    <td
+                      style={{ textAlign: "right" }}
+                      className="align-cell-right"
+                    >
+                      {job.department.title}
                     </td>
+                    <td>
+                      .
+                      <img className="mx-3" src={`${baseURL}/${job.image}`} />
+                      {job.city}
+                    </td>
+                    <td></td>
                   </tr>
                 );
               })}

@@ -676,13 +676,18 @@ Jobs
     background-repeat: no-repeat;
     background-size: cover;
     height: 320px; */
+  position: relative;
+  z-index: -1;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.Job__post_header > h1 {
+.Job__post_header > .content {
+  position: absolute;
+}
+.Job__post_header > .content > h1 {
   font-family: Source Sans Pro;
   font-weight: 900;
   font-style: normal;
@@ -690,13 +695,19 @@ Jobs
   line-height: 62.85px;
   color: #ffffff;
 }
-.Job__post_header > h2 {
+.Job__post_header > .img-container {
+  width: 100%;
+  height: 320px;
+  overflow-y: hidden;
+}
+.Job__post_header > .content > h2 {
   font-family: "BPG Nino Mtavruli Bold";
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
   line-height: 34.5px;
   color: #ffffff;
+  text-align: center;
 }
 .Job__post_content {
   display: flex;
@@ -1192,6 +1203,24 @@ HomeScreen2
   font-weight: 600;
   font-size: 30px;
   line-height: 45px;
+}
+.nothing-found {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 35px;
+  /* line-height: 52.5; */
+  color: #ffd600;
+}
+.error {
+  text-align: center;
+  margin-top: 90px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 35px;
+  /* line-height: 52.5; */
+  color: #ffd600;
 }
 .Blog__posts {
   display: flex;
@@ -1795,6 +1824,9 @@ HomeScreen2
     overflow-x: scroll;
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+  .align-cell-right {
+    text-align: right;
   }
   .JobsOpening > Table {
     margin-left: 5vw;

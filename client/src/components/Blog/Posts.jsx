@@ -98,25 +98,30 @@ const Posts = () => {
         <When condition={error}>
           <h1>{error}</h1>
         </When>
-        {_.map(
-          data,
-          ({ _id, category, title, createdAt, image, author }, index) => {
-            const formattedDate = getFormattedDate(new Date(createdAt));
-            return (
-              <div
-                key={`blog-post-${index + 1}`}
-                className="Blog__post"
-                style={{ backgroundImage: `url(${baseURL + "/" + image})` }}
-                onClick={() => openPost(_id)}
-              >
-                <h1>{category}</h1>
-                <p style={{ paddingLeft: "5%" }}>{title}</p>
-                <h3>
-                  {formattedDate} | {author}
-                </h3>
-              </div>
-            );
-          }
+
+        {!data.length && !isLoading && !error ? (
+          <h1 className="nothing-found">NOTHING FOUND..</h1>
+        ) : (
+          _.map(
+            data,
+            ({ _id, category, title, createdAt, image, author }, index) => {
+              const formattedDate = getFormattedDate(new Date(createdAt));
+              return (
+                <div
+                  key={`blog-post-${index + 1}`}
+                  className="Blog__post"
+                  style={{ backgroundImage: `url(${baseURL + "/" + image})` }}
+                  onClick={() => openPost(_id)}
+                >
+                  <h1>{category}</h1>
+                  <p style={{ paddingLeft: "5%" }}>{title}</p>
+                  <h3>
+                    {formattedDate} | {author}
+                  </h3>
+                </div>
+              );
+            }
+          )
         )}
       </div>
     </div>
