@@ -15,8 +15,10 @@ export const getJob = async ({ queryKey }) => {
     .then((res) => res.data);
 };
 
-export const getBlogs = () =>
-  instance.get("/admin/blogs").then((res) => res.data);
+export const getBlogs = (category, search) =>
+  instance
+    .get("/admin/blogs", null, { category, search })
+    .then((res) => res.data);
 export const getBlog = async ({ queryKey }) => {
   const [key, params] = queryKey;
   return instance

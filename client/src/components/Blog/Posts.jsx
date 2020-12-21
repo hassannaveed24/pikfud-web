@@ -1,52 +1,121 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import { useQuery } from "react-query";
 import { useHistory } from "react-router-dom";
-import { getBlogs, getFormattedDate } from "utils";
+import { getBlogs, getFormattedDate, instance } from "utils";
 import _ from "lodash";
 import { When } from "react-if";
 import { Loader } from "components/common";
 import classnames from "classnames";
+import { useState } from "react";
+import { useEffect } from "react";
+import logo from "../../assets/Blog/logo.png";
+import queryString from "query-string";
 
+const getCategories = async () => {
+  const res = await instance.get("/admin/blogs");
+  const categories = _.map(res.data, ({ category }) => category);
+  return [...new Set(categories)];
+};
 const Posts = () => {
-    const history = useHistory();
-    const openPost = useCallback((_id) => {
-        window.scrollTo(0, 0);
-        history.push(`/blogpost?p=${_id}`);
-    }, []);
+  const history = useHistory();
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [isLoading, setLoading] = useState(true);
+  const [categories, setCategories] = useState([]);
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
+  const openPost = useCallback((_id) => {
+    window.scrollTo(0, 0);
+    history.push(`/blogpost?p=${_id}`);
+  }, []);
+  const fetchCategories = useCallback(async () => {
+    setLoading(true);
+    try {
+      const uniqueCategories = await getCategories();
+      setCategories(uniqueCategories);
+    } catch (err) {
+      setError(err.message);
+    }
+    setLoading(false);
+  }, []);
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+  useEffect(() => {
+    get();
+  }, [search, category]);
+  const get = async () => {
+    setLoading(true);
 
-    const { data, isLoading, error } = useQuery("blogs", getBlogs, { retry: false });
+    let queryObject = {};
+    if (category) queryObject.category = category;
+    if (search) queryObject.search = search;
+    const query = queryString.stringify(queryObject);
 
-    return (
-        <div className="content-container is-blog">
-            <div
-                className={classnames("Blog__posts", { "content-min-height": isLoading || error })}
+    try {
+      const result = await instance.get(`/admin/blogs?${query}`);
+      setData(result.data);
+    } catch (err) {
+      setError(err.message);
+    }
+
+    setLoading(false);
+  };
+
+  return (
+    <div className="content-container is-blog">
+      <div className="Blog__filters content-container">
+        <h1>I WANT TO READ ABOUT</h1>
+        <ul>
+          {_.map(categories, (uniqueCategory, index) => (
+            <li
+              key={`category-${index + 1}`}
+              onClick={() => setCategory(uniqueCategory)}
+              className="Blog__filter"
             >
-                <When condition={isLoading}>
-                    <Loader />
-                </When>
-                <When condition={error}>
-                    <h1>{error?.message}</h1>
-                </When>
-                {_.map(data, ({ _id, title, description, createdAt, author }, index) => {
-                    const formattedDate = getFormattedDate(new Date(createdAt));
-                    return (
-                        <div
-                            key={`blog-post-${index + 1}`}
-                            className="Blog__post"
-                            onClick={() => openPost(_id)}
-                        >
-                            <h1>{title}</h1>
-                            {_.map(description.split("\\"), (paragraph, index) => (
-                                <p key={`blog-description-paragraph-${index + 1}`}>{paragraph}</p>
-                            ))}
-                            <h3>
-                                {formattedDate} | {author}
-                            </h3>
-                        </div>
-                    );
-                })}
-            </div>
+              <img alt="Filter Icon" src={logo} />
+              <h1>{uniqueCategory}</h1>
+            </li>
+          ))}
+        </ul>
+        <div className="d-flex justify-content-center w-100 mt-4">
+          <input
+            type="text"
+            onChange={(e) => setSearch(e.target.value)}
+            className="Blog__search"
+            placeholder="Looking for something?"
+          />
         </div>
-    );
+      </div>
+      <div
+        className={classnames("Blog__posts", {
+          "content-min-height": isLoading || error,
+        })}
+      >
+        <When condition={isLoading}>
+          <Loader />
+        </When>
+        <When condition={error}>
+          <h1>{error}</h1>
+        </When>
+        {_.map(data, ({ _id, category, title, createdAt, author }, index) => {
+          const formattedDate = getFormattedDate(new Date(createdAt));
+          return (
+            <div
+              key={`blog-post-${index + 1}`}
+              className="Blog__post"
+              onClick={() => openPost(_id)}
+            >
+              <h1>{category}</h1>
+              <p>{title}</p>
+              <h3>
+                {formattedDate} | {author}
+              </h3>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 export default Posts;
