@@ -1205,7 +1205,7 @@ HomeScreen2
 }
 
 .Blog__post {
-  background: url("./assets/Blog/BlogPost.png");
+  /* background: url("./assets/Blog/BlogPost.png"); */
   width: 628px;
   height: 400px;
   background-color: #c4c4c4;
