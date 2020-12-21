@@ -62,6 +62,15 @@ const Posts = () => {
     setLoading(false);
   };
 
+  const changeCategory = (currentCategory) => {
+    if (currentCategory == category) {
+      setCategory("");
+      return;
+    }
+
+    setCategory(currentCategory);
+  };
+
   return (
     <div className="content-container is-blog">
       <div className="Blog__filters content-container">
@@ -70,8 +79,10 @@ const Posts = () => {
           {_.map(categories, (uniqueCategory, index) => (
             <li
               key={`category-${index + 1}`}
-              onClick={() => setCategory(uniqueCategory)}
-              className="Blog__filter"
+              onClick={() => changeCategory(uniqueCategory)}
+              className={classnames("Blog__filter", {
+                active: category == uniqueCategory,
+              })}
             >
               <img alt="Filter Icon" src={logo} />
               <h1>{uniqueCategory}</h1>

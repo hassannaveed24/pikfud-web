@@ -96,15 +96,18 @@ const Jobs = () => {
                     <td>{job.title}</td>
                     <td
                       style={{ textAlign: "right" }}
-                      className="align-cell-right"
+                      // className="align-cell-right"
                     >
-                      {job.department.title}
-                    </td>
-                    <td>
+                      {job.department.title + "      "}
                       .
-                      <img className="mx-3" src={`${baseURL}/${job.image}`} />
+                      <img className="mx-3 " src={`${baseURL}/${job.image}`} />
                       {job.city}
                     </td>
+                    {/* <td style={{ textAlign: "right" }}>
+                      .
+                      <img className="mx-3 " src={`${baseURL}/${job.image}`} />
+                      {job.city}
+                    </td> */}
                     <td></td>
                   </tr>
                 );

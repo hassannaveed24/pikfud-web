@@ -16,10 +16,10 @@ https: ReactDOM.render(
         <Route path="/" render={(props) => <Layout {...props} />} />
         {/* <Redirect></Redirect> */}
         {/* to-do
-                jobs desing
-                job pic size
-                blogs pic size
-                blogs not found search */}
+               job apply
+               jobs table last column on right
+                blogs filter onclick check
+               */}
       </Switch>
     </QueryClientProvider>
   </BrowserRouter>,

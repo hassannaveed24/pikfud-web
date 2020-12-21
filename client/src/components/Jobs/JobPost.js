@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 import { baseURL, getJob, parseQuery } from "utils";
 import { useQuery } from "react-query";
@@ -9,10 +9,11 @@ import classnames from "classnames";
 import _ from "lodash";
 
 const JobPost = () => {
-  let location = useLocation();
+  let routerlocation = useLocation();
+  let history = useHistory();
 
   const { isLoading, error, data } = useQuery(
-    ["job", { _id: parseQuery(location.search).j }],
+    ["job", { _id: parseQuery(routerlocation.search).j }],
     getJob,
     {
       retry: false,
@@ -42,7 +43,9 @@ const JobPost = () => {
             {_.map(data?.description?.split(`\n`), (paragraph, index) => (
               <p key={`paragraph-${index + 1}`}>{paragraph}</p>
             ))}
-            <button>APPLY NOW</button>
+            <button onClick={() => window.open(data.link, "_blank")}>
+              APPLY NOW
+            </button>
           </div>
         </div>
       </When>

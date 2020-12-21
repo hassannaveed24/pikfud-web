@@ -1148,6 +1148,11 @@ HomeScreen2
   transition: all 200ms ease;
   width: 300px;
 }
+.Blog__filter.active {
+  background-color: #ff8298;
+  color: white;
+  border: 0;
+}
 .Blog__filter > img {
   margin-right: 1rem;
 }
