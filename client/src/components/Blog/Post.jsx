@@ -32,11 +32,14 @@ const Post = () => {
       <When condition={data}>
         <h1 className="Post__title">{data?.title}</h1>
         <h2 className="Post__sub-title">{data?.category}</h2>
-        <img
-          className="Post__head"
-          src={`${baseURL}/${data?.image}`}
-          alt="Post"
-        />
+        <div className="Post__head__img__container">
+          <img
+            className="Post__head"
+            src={`${baseURL}/${data?.image}`}
+            alt="Post"
+          />
+        </div>
+
         {_.map(data?.description.split("\n"), (paragraph, index) => {
           return (
             <p
