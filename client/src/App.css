@@ -322,16 +322,46 @@ Business
 .Header__feature-container > img {
   margin-right: 1rem;
 }
-
-.Header__contact {
-  background-color: white;
-  padding: 2rem 3rem;
-  /* width: min(50vw, 400px); */
+.Header__contact-container {
   min-width: 300px;
   width: 40vw;
 
   margin-right: 6rem;
   margin-left: 6rem;
+  position: relative;
+}
+.Header__message-overlay {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  /* background-color: #000; */
+  position: absolute;
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.Header__message-overlay > h3 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+}
+
+.Header__contact {
+  width: 100%;
+  background-color: white;
+  padding: 2rem 3rem;
+  /* width: min(50vw, 400px); */
+
   border-radius: 15px;
 }
 
@@ -375,7 +405,7 @@ Business
   color: white;
   font-weight: bold;
   border-radius: 15px;
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 0;
   outline: 0;
 }
 
