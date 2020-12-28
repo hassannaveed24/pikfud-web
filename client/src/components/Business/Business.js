@@ -53,7 +53,7 @@ const Business = () => {
                 <h1 className="Process__title">How it works?</h1>
                 <div className="Process__steps">
                     <div className="Process__step">
-                        <div className="Process__counter-1">1</div>
+                        <div className="Process__counter step-1">1</div>
 
                         <div className="Process__step-content">
                             <h1 className="Process__step-content__title">
@@ -72,10 +72,10 @@ const Business = () => {
                                 <br />- Pick up information
                             </h2>
                         </div>
-                        <img alt="Process Icon" src={business1} className="Process__image-1" />
+                        <img alt="Process Icon" src={business1} className="Process__image step-1" />
                     </div>
                     <div className="Process__step">
-                        <div className="Process__counter-2">2</div>
+                        <div className="Process__counter step-2">2</div>
 
                         <div className="Process__step-content">
                             <h1 className="Process__step-content__title">
@@ -94,10 +94,10 @@ const Business = () => {
                                 <br />- Pick up information
                             </h2>
                         </div>
-                        <img alt="Process Icon" src={business2} className="Process__image-2" />
+                        <img alt="Process Icon" src={business2} className="Process__image step-2" />
                     </div>
                     <div className="Process__step">
-                        <div className="Process__counter-3">3</div>
+                        <div className="Process__counter step-3">3</div>
 
                         <div className="Process__step-content">
                             <h1 className="Process__step-content__title">
@@ -116,7 +116,7 @@ const Business = () => {
                                 <br />- Pick up information
                             </h2>
                         </div>
-                        <img alt="Process Icon" src={business3} className="Process__image-3" />
+                        <img alt="Process Icon" src={business3} className="Process__image step-3" />
                     </div>
                 </div>
             </div>
