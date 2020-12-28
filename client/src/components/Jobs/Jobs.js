@@ -98,9 +98,8 @@ const Jobs = () => {
                       style={{ textAlign: "right" }}
                       // className="align-cell-right"
                     >
-                      {job.department.title + "      "}
-                      .
-                      <img className="mx-3 " src={`${baseURL}/${job.image}`} />
+                      {job.department.title + "      "}.
+                      {/* <img className="mx-3 " src={`${baseURL}/${job.image}`} /> */}
                       {job.city}
                     </td>
                     {/* <td style={{ textAlign: "right" }}>
