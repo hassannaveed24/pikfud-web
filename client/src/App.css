@@ -48,6 +48,7 @@ img {
 
 .content-container.is-blog {
     width: 90%;
+    flex-direction: column;
 }
 
 .Main__header {
@@ -321,16 +322,46 @@ Business
 .Header__feature-container > img {
     margin-right: 1rem;
 }
-
-.Header__contact {
-    background-color: white;
-    padding: 2rem 3rem;
-    /* width: min(50vw, 400px); */
+.Header__contact-container {
     min-width: 300px;
     width: 40vw;
 
     margin-right: 6rem;
     margin-left: 6rem;
+    position: relative;
+}
+.Header__message-overlay {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    /* background-color: #000; */
+    position: absolute;
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+
+.Header__message-overlay > h3 {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.Header__contact {
+    width: 100%;
+    background-color: white;
+    padding: 2rem 3rem;
+    /* width: min(50vw, 400px); */
+
     border-radius: 15px;
 }
 
@@ -374,7 +405,7 @@ Business
     color: white;
     font-weight: bold;
     border-radius: 15px;
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 0;
     outline: 0;
 }
 
@@ -644,13 +675,18 @@ Jobs
     background-repeat: no-repeat;
     background-size: cover;
     height: 320px; */
+    position: relative;
+    z-index: -1;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Job__post_header > h1 {
+.Job__post_header > .content {
+    position: absolute;
+}
+.Job__post_header > .content > h1 {
     font-family: Source Sans Pro;
     font-weight: 900;
     font-style: normal;
@@ -658,13 +694,22 @@ Jobs
     line-height: 62.85px;
     color: #ffffff;
 }
-.Job__post_header > h2 {
+.Job__post_header > .img-container {
+    width: 100%;
+    height: 320px;
+    overflow-y: hidden;
+}
+.Job__post_header > .img-container > img {
+    width: 100%;
+}
+.Job__post_header > .content > h2 {
     font-family: "BPG Nino Mtavruli Bold";
     font-weight: 700;
     font-style: normal;
     font-size: 30px;
     line-height: 34.5px;
     color: #ffffff;
+    text-align: center;
 }
 .Job__post_content {
     display: flex;
@@ -672,6 +717,13 @@ Jobs
     align-items: center;
     justify-content: center;
     margin: 4rem 5rem;
+}
+.Job__post_content > p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
 }
 .Job__post_content > h2 {
     font-family: Open Sans;
@@ -1105,6 +1157,11 @@ HomeScreen2
     transition: all 200ms ease;
     width: 300px;
 }
+.Blog__filter.active {
+    background-color: #ff8298;
+    color: white;
+    border: 0;
+}
 .Blog__filter > img {
     margin-right: 1rem;
 }
@@ -1161,19 +1218,37 @@ HomeScreen2
     font-size: 30px;
     line-height: 45px;
 }
+.nothing-found {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    /* line-height: 52.5; */
+    color: #ffd600;
+}
+.error {
+    text-align: center;
+    margin-top: 90px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    /* line-height: 52.5; */
+    color: #ffd600;
+}
 .Blog__posts {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     /* gap: 5rem; */
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-start;
     margin-bottom: 5rem;
 }
 
 .Blog__post {
-    background: url("./assets/Blog/BlogPost.png");
+    /* background: url("./assets/Blog/BlogPost.png"); */
     width: 628px;
     height: 400px;
     background-color: #c4c4c4;
@@ -1184,6 +1259,15 @@ HomeScreen2
     justify-content: space-between;
     /* align-items: center; */
     margin: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Blog__post > p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
 }
 .Blog__post > h1 {
     font-family: Poppins;
@@ -1226,10 +1310,14 @@ HomeScreen2
     font-size: 20px;
     line-height: 30px;
 }
-
+.Post__head__img__container {
+    width: 100%;
+    height: 400px;
+    overflow-y: hidden;
+}
 .Post__head {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     margin: 30px 0;
 }
 .Post__content {
@@ -1331,12 +1419,6 @@ HomeScreen2
         align-self: flex-start;
         margin-left: -20px;
     }
-    .Blog__filters > ul {
-        /* flex-direction: column; */
-        /* align-items: flex-start; */
-        flex-wrap: wrap;
-        /* justify-content: center; */
-    }
 
     /* .Blog__search {
     width: 450px;
@@ -1435,6 +1517,9 @@ HomeScreen2
 }
 
 @media only screen and (max-width: 776px) {
+    .Blog__filters > ul {
+        flex-wrap: wrap;
+    }
     .Blog__post {
         width: 520px;
     }

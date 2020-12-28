@@ -1,7 +1,12 @@
 .content-min-height {
-    height: calc(100vh - 404px);
+  height: calc(100vh - 404px);
 }
 
 .content-min-height.empty {
-    padding-top: 8rem;
+  padding-top: 8rem;
+}
+
+.form-feedback {
+  margin: 0;
+  color: crimson;
 }

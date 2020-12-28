@@ -10,7 +10,7 @@ import JobPost from "./components/Jobs/JobPost";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import CookiePolicy from "./components/CookiePolicy/CookiePolicy";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
-
+import Error from "./components/Error/Error";
 export const route = [
   {
     path: "/",

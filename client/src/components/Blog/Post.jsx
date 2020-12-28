@@ -7,41 +7,50 @@ import { When } from "react-if";
 import { Loader } from "components/common";
 import _ from "lodash";
 const Post = () => {
-    const location = useLocation();
-    const { data, error, isLoading } = useQuery(
-        ["post", { _id: parseQuery(location.search).p }],
-        getBlog,
-        {
-            retry: false,
-        }
-    );
+  const location = useLocation();
+  const { data, error, isLoading } = useQuery(
+    ["post", { _id: parseQuery(location.search).p }],
+    getBlog,
+    {
+      retry: false,
+    }
+  );
 
-    return (
-        <div
-            className={classnames("post-container", { "content-min-height": isLoading || error })}
-            style={{ marginTop: "10rem" }}
-        >
-            <When condition={isLoading}>
-                <Loader />
-            </When>
-            <When condition={error}>
-                <h1>{error?.message}</h1>
-            </When>
-            <When condition={data}>
-                <h1 className="Post__title">{data?.title}</h1>
-                <h2 className="Post__sub-title">{data?.category}</h2>
-                <img className="Post__head" src={`${baseURL}/${data?.image}`} alt="Post" />
-                {_.map(data?.description.split("\\"), (paragraph, index) => {
-                    return (
-                        <p
-                            key={`post-description-paragraph-${index + 1}`}
-                            className="Post__content"
-                        >
-                            {paragraph}
-                        </p>
-                    );
-                })}
-                {/* <body className="Post__content">
+  return (
+    <div
+      className={classnames("post-container", {
+        "content-min-height": isLoading || error,
+      })}
+      style={{ marginTop: "10rem" }}
+    >
+      <When condition={isLoading}>
+        <Loader />
+      </When>
+      <When condition={error}>
+        <h1>{error?.message}</h1>
+      </When>
+      <When condition={data}>
+        <h1 className="Post__title">{data?.title}</h1>
+        <h2 className="Post__sub-title">{data?.category}</h2>
+        <div className="Post__head__img__container">
+          <img
+            className="Post__head"
+            src={`${baseURL}/${data?.image}`}
+            alt="Post"
+          />
+        </div>
+
+        {_.map(data?.description.split("\n"), (paragraph, index) => {
+          return (
+            <p
+              key={`post-description-paragraph-${index + 1}`}
+              className="Post__content"
+            >
+              {paragraph}
+            </p>
+          );
+        })}
+        {/* <body className="Post__content">
                     That’s where Toast Ale steps in. Bakeries and sandwich manufacturers local to
                     their breweries provide unsold bread to Toast, where it's turned into
                     award-winning craft beer. From pale ales to IPAs, these brews are putting a dent
@@ -71,13 +80,15 @@ const Post = () => {
                     scientists said it was still safe to eat!
                     <br />
                 </body> */}
-                <div className="Post__creater">
-                    <h3 className="Post__creater__name">{data?.author}</h3>
-                    <h2 className="Post__time">{getFormattedDate(new Date(data?.createdAt))}</h2>
-                </div>
-            </When>
+        <div className="Post__creater">
+          <h3 className="Post__creater__name">{data?.author}</h3>
+          <h2 className="Post__time">
+            {getFormattedDate(new Date(data?.createdAt))}
+          </h2>
         </div>
-    );
+      </When>
+    </div>
+  );
 };
 
 export default Post;

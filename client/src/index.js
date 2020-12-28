@@ -10,14 +10,20 @@ import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 const queryClient = new QueryClient();
 
 https: ReactDOM.render(
-    <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
-            <Switch>
-                <Route path="/" render={(props) => <Layout {...props} />} />
-            </Switch>
-        </QueryClientProvider>
-    </BrowserRouter>,
-    document.getElementById("root")
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <Switch>
+        <Route path="/" render={(props) => <Layout {...props} />} />
+        {/* <Redirect></Redirect> */}
+        {/* to-do
+               job apply
+               jobs table last column on right
+                blogs filter onclick check
+               */}
+      </Switch>
+    </QueryClientProvider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
