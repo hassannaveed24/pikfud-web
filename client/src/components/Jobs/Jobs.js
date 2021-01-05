@@ -7,6 +7,7 @@ import { baseURL, getJobs } from "../../utils/server";
 import { Loader } from "components/common";
 import { useQuery } from "react-query";
 import { If, When, Then, Else } from "react-if";
+import { Helmet } from "react-helmet";
 const Jobs = () => {
   const { isLoading, error, data } = useQuery("jobs", getJobs);
 
@@ -25,6 +26,11 @@ const Jobs = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pikfud - Jobs</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="Jobs ">
         <div className="Jobs__header">
           <h1>

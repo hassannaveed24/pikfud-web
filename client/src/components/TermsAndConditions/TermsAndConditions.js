@@ -1,8 +1,13 @@
 import React from "react";
-
+import { Helmet } from "react-helmet";
 const TermsAndConditions = () => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pikfud - Terms&Conditions</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="legalMain">
         <div className="legal">
           <h1>Terms and Conditions for Users</h1>

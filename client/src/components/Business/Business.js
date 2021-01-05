@@ -6,12 +6,11 @@ import business1 from "assets/Business/business1.png";
 import business2 from "assets/Business/business2.png";
 import business3 from "assets/Business/business3.png";
 import { useFormik } from "formik";
-import { If, When, Then, Else } from "react-if";
-import { Loader } from "components/common";
-
+import { When } from "react-if";
 import { instance } from "utils";
 import successIcon from "assets/Business/success-icon.png";
 import Joi from "joi";
+import { Helmet } from "react-helmet";
 const formSchema = {
   name: Joi.string().trim().required().messages({
     "string.base": `Invalid name`,
@@ -78,6 +77,11 @@ const Business = () => {
   });
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pikfud - Business</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="Header">
         <div className="Header__features">
           <h1 className="Header__features-title">
@@ -167,7 +171,7 @@ const Business = () => {
         <h1 className="Process__title">How it works?</h1>
         <div className="Process__steps">
           <div className="Process__step">
-            <div className="Process__counter-1">1</div>
+            <div className="Process__counter step-1">1</div>
 
             <div className="Process__step-content">
               <h1 className="Process__step-content__title">
@@ -189,11 +193,11 @@ const Business = () => {
             <img
               alt="Process Icon"
               src={business1}
-              className="Process__image-1"
+              className="Process__image step-1"
             />
           </div>
           <div className="Process__step">
-            <div className="Process__counter-2">2</div>
+            <div className="Process__counter step-2">2</div>
 
             <div className="Process__step-content">
               <h1 className="Process__step-content__title">
@@ -215,11 +219,11 @@ const Business = () => {
             <img
               alt="Process Icon"
               src={business2}
-              className="Process__image-2"
+              className="Process__image step-2"
             />
           </div>
           <div className="Process__step">
-            <div className="Process__counter-3">3</div>
+            <div className="Process__counter step-3">3</div>
 
             <div className="Process__step-content">
               <h1 className="Process__step-content__title">
@@ -241,7 +245,7 @@ const Business = () => {
             <img
               alt="Process Icon"
               src={business3}
-              className="Process__image-3"
+              className="Process__image step-3"
             />
           </div>
         </div>

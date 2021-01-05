@@ -1,8 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pikfud - Privacy Policy</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="legalMain">
         <div className="legal">
           <h1>Privacy Policy</h1>

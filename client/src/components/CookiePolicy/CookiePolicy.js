@@ -1,8 +1,14 @@
 import React from "react";
 // import "./CookiePolicy.css";
+import { Helmet } from "react-helmet";
 const CookiePolicy = () => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pikfud - Cookie Policy</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="legalMain">
         <div className="legal">
           <h1>Cookie Policy</h1>
