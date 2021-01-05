@@ -9,9 +9,30 @@ import { useFormik } from "formik";
 import { If, When, Then, Else } from "react-if";
 import { Loader } from "components/common";
 
-import { values } from "lodash";
 import { instance } from "utils";
 import successIcon from "assets/Business/success-icon.png";
+import Joi from "joi";
+const formSchema = {
+  name: Joi.string().trim().required().messages({
+    "string.base": `Invalid name`,
+    "string.empty": `Please enter a name`,
+    "any.required": `Please enter a name`,
+  }),
+  phone: Joi.number().positive().required().messages({
+    "number.base": `Please enter a valid phone number`,
+    "number.empty": `Please enter a phone number`,
+    "any.required": `Please enter a phone number`,
+  }),
+  email: Joi.string()
+    .trim()
+    .email({ tlds: { allow: false } })
+    .required()
+    .messages({
+      "string.base": `Invalid email`,
+      "string.empty": `Please enter a email`,
+      "any.required": `Please enter a email`,
+    }),
+};
 const Business = () => {
   const [error, seterror] = useState(null);
   const [isLoading, setisLoading] = useState(null);
@@ -27,9 +48,16 @@ const Business = () => {
     validate: (values) => {
       let errors = {};
       const { name, phone, email } = values;
-      if (name.length == 0) errors.name = "Please enter name";
-      if (phone.length == 0) errors.phone = "Please enter phone";
-      if (email.length == 0) errors.email = "Please enter email";
+
+      const nameError = formSchema.name.validate(name);
+      if (nameError?.error) errors.name = nameError.error.details[0].message;
+
+      const phoneError = formSchema.phone.validate(phone);
+      if (phoneError?.error) errors.phone = phoneError.error.details[0].message;
+
+      const emailError = formSchema.email.validate(email);
+      if (emailError?.error) errors.email = emailError.error.details[0].message;
+
       return errors;
     },
     onSubmit: async (values) => {
