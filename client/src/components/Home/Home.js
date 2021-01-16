@@ -21,21 +21,21 @@ const Home = () => {
           <img className="HomeScreen1-homePic" src={homePic} />
         </div>
         <div>
-          <h3 className="HomeScreen1-title">IT'S SIMPLE</h3>
+          <h3 className="HomeScreen1-title">ეს მარტივია</h3>
         </div>
         <div className="HomeScreen1Content">
           <div className="">
             <img className=" HomeScreen1NavImg" src={appDownload} />
-            <h4 className="HomeScreen1-nav">Download the app</h4>
+            <h4 className="HomeScreen1-nav">გადმოწერე აპლიკაცია</h4>
           </div>
           <div className="">
             <img className=" HomeScreen1NavImg" src={rescueFood} />
-            <h4 className="HomeScreen1-nav">Rescue food for half price</h4>
+            <h4 className="HomeScreen1-nav">გადაარჩინე საკვები ნახევარ ფასად</h4>
           </div>
           <div className="">
             <img className=" HomeScreen1NavImg" src={pickIt} />
             <h4 className="HomeScreen1-nav">
-              Pick it up as take away and enjoy
+            თქვენი შეკვეთა წასაღებად მზად არის
             </h4>
           </div>
         </div>
@@ -43,21 +43,16 @@ const Home = () => {
       {/* HomeScreen2 */}
       <div className="HomeScreen2">
         <h1 className="HomeScreen2H4">
-          We’re throwing away more food than the planet can handle.
+        გადმოწერეთ აპლიკაცია და შეუკვეთეთ
         </h1>
         <h2 className="HomeScreen2Body">
-          But that’s not the only problem. It takes a lot of land, energy and
-          water to make our food. By wasting that food, we also waste the
-          resources that went into producing it, putting needless strain on our
-          earth.
+        ყოველ დღე, ჯანსაღი და ვარგისი საკვები კაფეებიდან, რესტორნებიდან, სასტუმროებიდან და მარკეტებიდან პირდაპირ ნაგავსაყრელებში პოულობენ ადგილს.
           <br />
           <br />
-          But that’s not the only problem. It takes a lot of land, energy and
-          water to make our food. By wasting that food, we also waste the
-          resources that went into producing it, putting needless strain on our
-          earth.
+          ერთი მიზეზის გამო: რადგან დროზე რეალიზაცია ვერ მოხერხდა. პიკფუდთან ერთად თქვენ შეძლებთ ეს საკვები გადაარჩინოთ 50% ფასდაკლებით
         </h2>
       </div>
+
       <div>
         <div className="flex-container HomeScreen2Wastage">
           <div>
@@ -65,15 +60,33 @@ const Home = () => {
           </div>
           <div className="HomeScreenWastage2Body">
             <h2 className="HomeScreen2WastageH2">
-              One third of all food is wasted.
+              წარმოებული ვარგისი საჭმლის 1/3 ნაგავში იყრება.
             </h2>
-            <h1 className="HomeScreen2WastageH1">We’re changing that.</h1>
+            <h1 className="HomeScreen2WastageH1">მოდით ყველამ შევიტანოთ წვლილი ამ ვითარების გასაუმჯობესებლად.</h1>
           </div>
         </div>
       </div>
 
+      <div className="HomeScreen2">
+        <h1 className="HomeScreen2H4">
+          პიკფუდის მიზანი
+        </h1>
+        <h2 className="HomeScreen2Body">
+        Pikfud არის სტარტაპი, რომელსაც სურს საქართველოში შემოიტანოს ევროპაში უკვე გავრცელებული პრაქტიკა და შეამციროს საკვების გადაყრა, ამასთან ერთად კი მომხმარებელს გაუიაფოს პროდუქტი.
+          <br />
+          <br />
+          თქვენ შეგეძლებათ აირჩიოთ თქვენთვის სასურველი, იყიდოთ 50% ფასდაკლებით, შემდეგ კი მიბრძანდეთ ლოკაციაზე და აიღოთ თქვენი შეძენილი პროდუქტი
+          <br />
+          <br />
+          {/* But that’s not the only problem. It takes a lot of land, energy and
+          water to make our food. By wasting that food, we also waste the
+          resources that went into producing it, putting needless strain on our
+          earth. */}
+        </h2>
+      </div>
+
       <div className="flex-container HomeScreen2Partners" style={{}}>
-        <h1 className="HomeScreen2PartnersH1">MEET OUR PARTNER STORES</h1>
+        <h1 className="HomeScreen2PartnersH1">ჩვენი პარტნიორები</h1>
 
         <div className="partnersImgMain">
           <div className="partnersImgRow1">
@@ -103,16 +116,16 @@ const Home = () => {
         <div className="content-container ">
           <div className="CallToAction__content Main__CallToAction__content">
             <h1>
-              Join the first zero food
+              გადაარჩინე
               <br />
-              waste generation
+              გემრიელი საკვები
             </h1>
             <div className="CallToAction__buttons-container">
               <button type="button" className="CallToAction__button">
-                Business
+                გახდი პარტნიორი
               </button>
               <button type="button" className="CallToAction__button">
-                Download App
+                გადმოწერე აპი
               </button>
             </div>
           </div>

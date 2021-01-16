@@ -85,20 +85,20 @@ const Business = () => {
       <div className="Header">
         <div className="Header__features">
           <h1 className="Header__features-title">
-            Selling surplus food just got easy
+          შეამცირე ჭარბი საკვების მარაგი
           </h1>
           <div className="Header__features-container">
             <div className="Header__feature-container">
               <img alt="Features Icon" src={recycle} />
-              <h2>Cut your waste</h2>
+              <h2>შეამცირე ნარჩენი ვარგისი საკვები</h2>
             </div>
             <div className="Header__feature-container">
               <img alt="Features Icon" src={support} />
-              <h2>Attract new customers</h2>
+              <h2>მოიზიდე ახალი მომხმარებლები</h2>
             </div>
             <div className="Header__feature-container">
               <img alt="Features Icon" src={coin} />
-              <h2>Win back sunk costs</h2>
+              <h2>შექმენი დამატებითი შემოსავალის წყარო</h2>
             </div>
           </div>
         </div>
@@ -113,13 +113,13 @@ const Business = () => {
             </div>
           </When>
           <div className="Header__contact">
-            <h2>Become Partner</h2>
+            <h2>გახდი პარტნიორი</h2>
             <form
               className="Header__contact-form"
               onSubmit={formik.handleSubmit}
             >
               <div className="Header__form-field">
-                <label for="name">Name of Business</label>
+                <label for="name">კომპანიის დასახელება</label>
                 <input
                   type="text"
                   id="name"
@@ -130,7 +130,7 @@ const Business = () => {
               </div>
 
               <div className="Header__form-field">
-                <label for="phone">Phone Number</label>
+                <label for="phone">მობილურის ნომერი</label>
                 <input
                   type="text"
                   id="phone"
@@ -141,7 +141,7 @@ const Business = () => {
               </div>
 
               <div className="Header__form-field">
-                <label for="email">Email address</label>
+                <label for="email">ელ.ფოსტა</label>
                 <input
                   type="text"
                   id="email"
@@ -168,7 +168,7 @@ const Business = () => {
         </div>
       </div>
       <div className="Process">
-        <h1 className="Process__title">How it works?</h1>
+        <h1 className="Process__title">როგორ მუშაობს?</h1>
         <div className="Process__steps">
           <div className="Process__step">
             <div className="Process__counter step-1">1</div>
@@ -179,15 +179,16 @@ const Business = () => {
                 style your profile!
               </h1>
               <h2>
-                1. Download the Pikfud Retailer app or sign up here.
+              1. ჩამოტვირთეთ პიკფუდის ბიზნეს აპლიკაცია ან დარეგისტრირდით აქ
                 <br />
                 <br />
                 <br />
-                2. Go to Sales planner and add:
-                <br />- Logo
-                <br /> - Profile background
-                <br /> - Description
-                <br />- Pick up information
+                2. ჩამონათვალის დამატება:
+                <br />- კატეგორია
+                <br /> - პროდუქტის დასახელება
+                <br /> - მოკლე აღწერა
+                <br />- ფოტოსურათის დამატება
+                <br />- პრუდქტის ფასი
               </h2>
             </div>
             <img
@@ -201,19 +202,21 @@ const Business = () => {
 
             <div className="Process__step-content">
               <h1 className="Process__step-content__title">
-                Once you’ve signed up, you directly show in the app - let’s
-                style your profile!
+                დაწყება
               </h1>
               <h2>
-                1. Download the Pikfud Retailer app or sign up here.
+                1. დამატება წარმატებით დასრულდა.
                 <br />
                 <br />
                 <br />
-                2. Go to Sales planner and add:
-                <br />- Logo
-                <br /> - Profile background
-                <br /> - Description
-                <br />- Pick up information
+                2. შეიყვანეთ სასურველი დრო.
+                <br />
+                <br />
+                <br />
+                3. შეიყვანეთ რაოდენობა.
+                <br />
+                <br />
+                <h5>როდესაც შეიყვანთ თქვენს პროდუქციას ჩვენს სისტემაში, აპლიკაცია ავტომატურად გაუგზავნის შეტყობინებას ახლო მდებარე მომხმარებლებს.</h5>
               </h2>
             </div>
             <img
@@ -227,19 +230,17 @@ const Business = () => {
 
             <div className="Process__step-content">
               <h1 className="Process__step-content__title">
-                Once you’ve signed up, you directly show in the app - let’s
-                style your profile!
+              მომხმარებლები ჩვენი აპლიკაციის მეშვეობით შეიძენენ თქვენს პროდუქციას და ასაღებად მოვლენ თქვენს ლოკაციაზე
               </h1>
               <h2>
-                1. Download the Pikfud Retailer app or sign up here.
+                1. ნახეთ შეკვეთები შეკვეთის  ველში.
                 <br />
                 <br />
                 <br />
-                2. Go to Sales planner and add:
-                <br />- Logo
-                <br /> - Profile background
-                <br /> - Description
-                <br />- Pick up information
+                2. აღნიშნეთ  შეკვეთილი პროდუქტი.
+                <br />
+                <br />
+                <h5>სულ ესაა! წარმატებები</h5>
               </h2>
             </div>
             <img

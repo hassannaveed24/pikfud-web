@@ -15,19 +15,19 @@ export const route = [
   {
     path: "/",
     component: Home,
-    name: "HOME",
+    name: "მთავარი",
     show: true,
   },
   {
     path: "/aboutus",
     component: AboutUs,
-    name: "ABOUT US",
+    name: "ჩვენს შესახებ",
     show: true,
   },
   {
     path: "/blog",
     component: Blog,
-    name: "BLOG",
+    name: "ბლოგი",
     show: true,
   },
   {
@@ -38,23 +38,23 @@ export const route = [
   {
     path: "/business",
     component: Business,
-    name: "BUSINESS",
+    name: "ბიზნესი",
     show: true,
   },
   {
     path: "/jobs",
     component: Jobs,
-    name: "Jobs",
+    name: "კარიერა",
   },
   {
     path: "/termsandconditions",
     component: TermsAndConditions,
-    name: "Terms & Conditions",
+    name: "წესები და პირობები",
   },
   {
     path: "/privacypolicy",
     component: PrivacyPolicy,
-    name: "Privacy Policy",
+    name: "კონფიდენციალურობის პოლიტიკა",
   },
   {
     path: "/cookiepolicy",

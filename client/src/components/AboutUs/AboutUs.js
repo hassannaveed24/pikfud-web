@@ -32,37 +32,32 @@ const AboutUs = () => {
             />
           </div>
           <div className="wasteProblemTextDiv">
-            <h1>The $1.2 trillion food waste problem</h1>
+            <h1>წარმოებული ვარგისი საჭმლის 1/3 ნაგავში მიდის.</h1>
             <br />
             <body>
-              One third of all food produced is thrown away annually, resulting
-              in 1.3 billion tonnes of waste worldwide. It’s one of the largest
-              climate and economic issues facing our planet creating a massive
-              business opportunity.
+            წარმოებული საკვების მესამედი ფუჭად იხარჯება. საჭმლის ნარჩენები იმდენივე ნახშირბადს გამოყოფს, რამდენიც მილიონობით მანქანა. 
+            რა მოხდება თუ ჩვენ უფრო მეტად ვიზრუნებთ საჭმელზე? 
               <br />
               <br />
               <br />
-              In fact, if food waste was a country, it would be the 3rd biggest
-              CO2 emission contributing country in the world.
+              დარწმუნებულნი ვართ, ერთხელ მაინც გიფიქრიათ, რა მოსდის იმ საკვებს, რომელიც კვების ობიექტში დამზადდა თუმცა მომხმარებლამდე ვერ მივიდა.
+              სტატისტიკურად, ხშირ შემთხვევაში, ასეთი საკვები ნაგავსაყრელებში პოულობენ ადგილს.
             </body>
           </div>
         </div>
 
         <div className="wasteProblem">
           <div className="solutionTextDiv">
-            <h1>The solution</h1>
+            <h1>გამოსავალი</h1>
             <br />
             <body>
-              What if we ate the problem? What if we connect surplus food from
-              retailers to consumers for a lower price? As a result, users eat
-              great food for less and businesses receive an additional revenue
-              stream — all while together reducing food waste.
+            Pikfud არის სტარტაპი, რომელსაც სურს საქართველოში შემოიტანოს ევროპაში უკვე გავრცელებული პრაქტიკა და შეამციროს საკვების გადაყრა,
+               ამასთან ერთად კი მომხმარებელს გაუიაფოს პროდუქტი.
               <br />
               <br />
               <br />
-              The app, Karma, is a food rescue app that allows retailers to sell
-              their surplus food to consumers at half price - instead of having
-              great food go to waste.
+              თქვენ იწერთ Pikfud-ს თქვენს სმარტფონში, სადაც ობიექტი განათავსებს პროდუქტს, რომელიც ვერ რეალიზდა, მომდევნო დღეს კი მათი გაყიდვა აღარ შეიძლება.
+               თქვენ შეგეძლებათ აირჩიოთ თქვენთვის სასურველი, იყიდოთ 50% ფასდაკლებით, შემდეგ კი მიბრძანდეთ ლოკაციაზე და აიღოთ თქვენი შეძენილი პროდუქტი
             </body>
           </div>
           <div>
@@ -86,19 +81,17 @@ const AboutUs = () => {
             <h1>2020</h1>
             <br />
             <br />
-            <h1>Pikfud is founded</h1>
+            <h1>პიკფუდის შექმნა</h1>
             <br />
             <br />
             <body>
-              The solution came to life and Karma was founded and built, a
-              Swedish startup founded in Stockholm, November 2016, by Hjalmar
-              Ståhlberg Nordegren, Elsa Bernadotte, Ludvig Berling and Mattis
-              Larsson.
+            პიკფუდი არის კულტურა, რომელიც ევროპაში უკვე მრავალი წელია უკვე ფუნქციონირებს და სარგებლობს დიდი პოპულარულობით.
+            პიკფუდის ჯგუფი შედგება ახალგაზრდებისაგან რომლებიც ცდილობენ ეს კულტურა დანერგონ საქართველოში და წვლილი შეიტანონ უკეთესი მომავლისაკენ
             </body>
           </div>
         </div>
 
-        <div className="partners">
+        {/* <div className="partners">
           <div className="partnersTxt">
             <h1>Creating the first zero food waste generation</h1>
             <h2>together with our awesome partners, buyers and sellers</h2>
@@ -122,7 +115,7 @@ const AboutUs = () => {
               <img />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

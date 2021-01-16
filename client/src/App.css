@@ -23,6 +23,22 @@
         url("./assets/Jobs/bpg_nino_mtavruli_bold.woff") format("woff");
 }
 
+@font-face {
+    font-family: "FiraGO-SemiBold";
+    font-style: bold;
+    font-weight: bold;
+    src: local("FiraGO-SemiBold"),
+      url("./assets/Home/FiraGO-SemiBold.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "FiraGO-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("FiraGO-SemiBold"),
+      url("./assets/Home/FiraGO-Regular.woff") format("woff");
+  }
+
 @import url("assets/styles/global.css");
 @import url("assets/styles/utils.css");
 
@@ -60,7 +76,7 @@ img {
     display: block;
     transition: top 0.3s ease-in-out;
     /* margin-bottom: 50px; */
-    font-family: Russo One;
+    font-family: "FiraGo-SemiBold";
     font-style: normal;
     font-weight: 400 !important;
     font-size: 25px !important;
@@ -125,10 +141,10 @@ AboutUs \
 .wasteProblemTextDiv > h1 {
     /* background-color: blue; */
     text-align: center;
-    font-family: Russo One;
+    font-family: "FiraGo-SemiBold";
     font-weight: 400;
     font-size: 35px;
-    line-height: 42px;
+    line-height: 40px;
     margin: auto;
 }
 
@@ -152,10 +168,10 @@ AboutUs \
 
 .solutionTextDiv > h1 {
     text-align: center;
-    font-family: Russo One;
+    font-family: "FiraGo-SemiBold";
     font-weight: 400;
     text-align: center;
-    font-family: Russo One;
+    font-family: "FiraGo-SemiBold";
     font-weight: 400;
     font-size: 35px;
     line-height: 42px;
@@ -207,7 +223,7 @@ AboutUs \
 }
 .foundedTxt > h1 {
     text-align: center;
-    font-family: Russo One;
+    font-family: "FiraGo-SemiBold";
     font-weight: normal;
     font-style: normal;
     font-size: 35px;
@@ -415,7 +431,7 @@ Business
 }
 
 .Process__title {
-    font-family: Russo One;
+    font-family: "FiraGo-SemiBold";
     font-weight: 400;
     font-size: 40px;
     line-height: 48.2px;
@@ -898,7 +914,7 @@ HomeScreen1
 
 .HomeScreen1-title {
     color: #ff8298;
-    font-family: "Russo One", sans-serif;
+    font-family: "FiraGo-SemiBold";
     font-weight: 400;
     margin: 4rem 10rem 0 10rem;
 }
@@ -915,7 +931,7 @@ HomeScreen1
     align-items: center;
 }
 .HomeScreen1-nav {
-    font-family: "Russo One", sans-serif;
+    font-family: "FiraGo-SemiBold";
     margin-top: 2rem;
 }
 .HomeScreen1NavImg {
@@ -1045,7 +1061,7 @@ HomeScreen2
 }
 .HomeScreen2WastageH2 {
     color: #ffffff;
-    font-family: "Roboto", sans-serif;
+    font-family: "FiraGo-SemiBold";
     font-weight: 700;
 }
 .HomeScreen2WastageH1 {
@@ -1062,7 +1078,7 @@ HomeScreen2
 }
 .HomeScreen2PartnersH1 {
     text-align: center;
-    font-family: Source Sans Pro;
+    font-family: "FiraGo-SemiBold";
     font-weight: 900;
     font-size: 45px;
     line-height: 57px;

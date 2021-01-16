@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from "react";
-import Rectangle30 from "../../assets/Jobs/Rectangle30.png";
+import Rectangle30 from "../../assets/Jobs/Rectangle30.jpg";
 import { FaCaretDown } from "react-icons/fa";
 import { Table } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
@@ -66,10 +66,7 @@ const Jobs = () => {
             what we look for in the perfect waste warrior. Sound like you?
             <br />
             <br />
-            First and foremost, to work at Pikfud you need to believe in doing
-            the right thing, always. That combined with a resourceful attitude,
-            a creative spark and a strong desire to keep learning and growing is
-            what we look for in the perfect waste warrior. Sound like you?
+            
           </h2>
         </div>
         <div className="Culture ">

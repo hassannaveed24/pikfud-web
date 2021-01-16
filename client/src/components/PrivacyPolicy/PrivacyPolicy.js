@@ -1,65 +1,102 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Pikfud - Privacy Policy</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
       <div className="legalMain">
         <div className="legal">
-          <h1>Privacy Policy</h1>
+          <h1>პერსონალურ მონაცემთა დაცვის წესები</h1>
           <br />
-          <h1>1. General Description </h1>
+          <h1>(კონფიდენციალურობის პოლიტიკა) </h1>
           <br />
           <br />
           <body>
-            <h2>1.1 Introduction</h2>
+            
             <p className="legalMyBody">
-              These User Terms and Conditions (this “Agreement”), is a legal
-              agreement between you and Karmalicious AB, a Swedish company
-              (“Karma”), which guides your use of and access to the Application
-              (as defined below) and the Website (as defined below). If you
-              don’t want to be bound by this Agreement, please do not access or
-              use the Application and/or Website. Karma may terminate, without
-              notice, your access to the Application and/or Website for failure
-              to comply with this Agreement. By creating an account in the
-              Application and/or on the Website, you accept this Agreement and
-              agree to be bound by each of its terms. By creating an account in
-              the Application and/or on the Website, you accept this Agreement
-              and agree to be bound by each of its terms. Website, you accept
-              this Agreement and agree to be bound.
+            შპს ,,პიკფუდი” (ს/ნ:404600026, რეგისტრირებული) შემდგომში ,,Pikfud“  უზრუნველყოფს  თავის ვებ გვერდზე  www.pikfud.com   და მასთან დაკავშირებულ მობილურ აპლიკაციაში  ( Pikfud) მომხმარებლების 
+            კონფიდენციალურობის მაღალი ხარისხით დაცვას. აღნიშნულიდან გამომდინარე საქართველოში მოქმედი კანონმდებლობის მოთხოვნათა დაცვით აწვდის მომხმარებლენს ინფორმაციას ,,პერსონალურ მონაცემთა დაცვის პოლიტიკის“ შესახებ. 
+            ,,პერსონალურ მონაცემთა დაცვის პოლიტიკის“ წესები გამოიყენება მომხმარებლის მიერ ვებ გვერდზე ან/და აპლიკაციაში მომხმარებლის მიერ Pikfud-ისთვის მიწოდებული პერსონალური მონაცემების დამუშავების დროს. 
             </p>
           </body>
           <br />
-          <h1>2. General Description </h1>
+          <h1>პერსონალური მონაცემების შენახვა და გამოყენება:</h1>
           <br />
           <br />
           <body>
-            <h2>1.1 Introduction</h2>
             <p className="legalMyBody">
-              These User Terms and Conditions (this “Agreement”), is a legal
-              agreement between you and Karmalicious AB, a Swedish company
-              (“Karma”), which guides your use of and access to the Application
-              (as defined below) and the Website (as defined below). If you
-              don’t want to be bound by this Agreement, please do not access or
-              use the Application and/or Website. Karma may terminate, without
-              notice, your access to the Application and/or Website for failure
-              to comply with this Agreement. By creating an account in the
-              Application and/or on the Website, you accept this Agreement and
-              agree to be bound by each of its terms. By creating an account in
-              the Application and/or on the Website, you accept this Agreement
-              and agree to be bound by each of its terms. Website, you accept
-              this Agreement and agree to be bound.Karma works with local
-              merchants to offer you the opportunity to purchase and pick up
-              food that would otherwise go to waste. In the discovery view in
-              the Application, merchants are displayed on a map. In the list
-              below, merchants are listed in order of distance to where you are
-              located when the Application is open (the Merchants closest to you
-              is shown first in the list).
+            •	მომხმარებლის მიერ ვებ-გვერდის გამოყენებისას სერვერზე ფიქსირდება ტექნიკური მონაცემები, 
+            რომელიც მოიცავს, მაგრამ არ შემოიფარგლება შემდეგი ტიპის მონაცემებით: ვებ-გვერდზე შესვლის თარიღი, IP მისამართი, 
+            შესრულებული ქმედება.
+            </p>
+            <p className="legalMyBody">
+            •	დელეგირებული და კლიენტის მიერ მოწოდებული მონაცემი ინახება ვებ-სერვერზე. ე.წ. ლოგებისა და მონაცემთა ბაზის სხვა 
+            ჩანაწერების სახით. მონაცემთა დამუშავება ხორციელდება სტატისტიკური ანალიზისთვის, ასევე, შესაძლო ინფორმაციული უსაფრთხოების 
+            ინციდენტების გამოვლენისა და ვებ ადმინისტრირების მიზნებისთვის.   
+            </p>
+            <p className="legalMyBody">
+            •	ვებ გვერდის ან/და მობილური ალიკაციით Pikfud -ისთვის პერსონალური ინფორმაციის მიწოდებისას მომხმარებლები აცხადებენ თანხმობას, 
+            რომ Pikfud-მა დაამუშაოს მისი პერსონალური მონაცემები  წინამდებარე ,,პერსონალურ მონაცემთა დაცვის პოლიტიკის“ შესაბამისად. 
+            </p>
+            <p className="legalMyBody">
+            •	Pikfud პლატფორმაზე დასარეგისტრირებლად მომხმარებლები ვალდებულნი არიან გაეცნონ და დაეთანხმონ როგორც მომსახურებს წესებსა და პირობებს, 
+            ასევე ,,პერსონალურ მონაცემთა დაცვის პოლიტიკას“ და ,,ქუქი ფაილების პოლიტიკას“. 
+            </p>
+            <p className="legalMyBody">
+            •	მომხმარებელი რეგისტრაციის დროს Pikfud-ს აწვდის შემდეგ მონაცემებს: სახელი და გვარი, ელექტონული ფოსტის მისამართი. ტელეფონის ნომრის მიწოდება
+             არ არის სავალდებულო და მისი მითითება რეგისტრაციისას არის მომხმარებლის სურვილზე დამოკიდებული.   
+            </p>
+            <p className="legalMyBody">
+            •	მომხმარებელი ვალდებულია Pikfud-ს მიაწოდოს სწორი ინფორმაცია, წინააღდეგ შემთხვევაში ვალდებულია სრულად აანაზღაუროს კომპანიის ან/და ნებიმიერი 
+            მესამე პირისთვის მიყენებული ზიანი. 
+            </p>
+            <p className="legalMyBody">
+            •	აღნიშნულ ინფორმაციასთან ერთად Pikfud  ამუშავებს ინფორმაციას მომხმარებლის ადგილსამყოფელის, მათ შორის მომხმარებლის კომპიუტერის ან მობილური 
+            მოწყობილობის ფაქტობრივი გეოგრაფიული ადგილსამყოფელის შესახებ.   
+            </p>
+            <h1>პერსონალური მონაცემების შენახვა და გამოყენება:</h1>
+            <p className="legalMyBody">
+            Pikfud-ის მიერ მომხმარებლის დამუშავებული და შეგროვებული პერსონალური მონაცემები იყოფა 2 ნაწილად:   
+            </p>
+            <p className="legalMyBody">
+            ,,მომხმარებლის მიერ მოწოდებული მონაცემები“ და ,,ანალიტიკური მონაცემები“:    
+            </p>
+            <p className="legalMyBody">
+            •	მომხმარებლის მონაცემებია - ნებისმიერი პერსონალური მონაცემი, რომელიც გროვდება პირადად მომხმარებლისგან 
+            სხვადასხვა საშუალებებით, მათ შორის რეგისტრაციისას და საჭიროა Pikfuდ-ის მომსახურებით სარგებლობისთვის.  აღნიშნული 
+            ინფორმაციის შეგროვება და დამუშავება აუცილებელია მომხმარებელსა და Pikfud-ს შორის დადებული ხელშეკრულების შესრულებისთვის.     
+            </p>
+            <p className="legalMyBody">
+            •	Pikfud აგრეთვე უფლებამოსილია შეინახოს და დაამუშაოს მომხმარებლის მიერ ნებაყოფლობით მიწოდებული სხვა ინფორმაცია როგორიც 
+            არის ინფორმაცია, რომელსაც მომხმარებელი იძლევა მომსახურების შეფასებისას, მარკეტინგული შეტყობინებების გამოწერა და გაუქმებისას  
+            ან/და ტელეფონით, ელექტრონული ფოსტით, ჩათის მეშევეობით მომხარებელთა მომსახურებასთან დაკავშირებული ურთიერთობისას.     
+            </p>
+            <p className="legalMyBody">
+            •	ანალიტიკური მონაცემები -  მომხარებლის მიერ Pikfud -ის ვებ გვერდსა თუ მობილურ აპლიკაციაში შესვლისას Pikfud ავტომატურად აგროვებს 
+            იმ მოწყობილობის შესახებ ინფორმაციას, რომელიც გამოყენებულია Pikfud-ის მომსახურებით სარგებლობისას. კერძოდ ასეთი ინფორმაციაა:  
+            მოწყობილობის ტიპი და საიდენტიფიკაციო ნომერი, ქვეყანა, IP მისამართი, ვებ ბრაუზერის ტიპი, ოპერატიული სისტემა, ინტერნეტ სერვისის პროვაიდერი, 
+            ვიზიტორის იდენტიფიკატორი, თქვნი მოწყობილობის სარეკლამო იდენტიფიკატორი.     
+            </p>
+            <h1>ინფორმაციის გამოყენება</h1>
+            <h3>Pikfud ასევე აგროვებს და იყენებს შემდეგი სახის ინფორმაციას: </h3>
+            <p className="legalMyBody">
+            •	თქვენს მიერ Pikfud მომსახურებაზე გატარებული დრო;  
+            </p>
+            <p className="legalMyBody">
+            •	ინფორმაცია თქვენს მიერ Pikfud მომსახურების მეშვეობით გაკეთებული შეკვეთების შესახებ;
+            </p>
+            <p className="legalMyBody">
+            •	Pikfud აპლიკაციაში თქვენი შესვლის დრო და თარიღი;
+            </p>
+            <p className="legalMyBody">
+            • პროდუქცია რომელებსაც თქვენ ეძებდით Pikfud მომსახურების გამოყენებისას. 
+            </p>
+            <h1>შეტყობინებების მიღება და ცვლილებების შეტანა</h1>
+            <p className="legalMyBody">
+            Pikfud-ის ყველა მომხმარებელს აქვს უფლება, ჰქონდეს წვდომა მის მონაცემებზე, 
+            განაახლოს ან/და წაშალოს იგი და ასევე, გამოხატოს პრეტენზიები. ამ უფლების 
+            განხორცილება ან/და Pikfud-ის „პერსონალურ მონაცემთა დაცვის წესებთან“ დაკავშირებით 
+            მოთხოვნების გაგზავნა შესაძლებელია ვებ გვერდზე ან/და აპლიკაციაში მითითებული  
+            ,,საკონტაქტო ფორმის“ მეშვეობით. 
             </p>
           </body>
         </div>

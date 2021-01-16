@@ -22,37 +22,37 @@ const Footer = () => {
                 <img src={googlePlay} className="cto-button" />
               </div>
               <div className="footer-SocialIcons">
-                <a href="https://www.facebook.com" target="_blank">
+                <a href="https://www.facebook.com/pikfud" target="_blank">
                   <FaFacebook className="footer-icon" />
                 </a>
-                <a href="https://www.instagram.com" target="_blank">
+                <a href="https://www.instagram.com/pikfud/" target="_blank">
                   <FaInstagram className="footer-icon" />
                 </a>
-                <a href="https://www.twitter.com" target="_blank">
+                <a href="https://twitter.com/pikfud" target="_blank">
                   <FaTwitter className="footer-icon" />
                 </a>
-                <a href="https://www.linkedin.com" target="_blank">
+                <a href="https://www.linkedin.com/company/pikfud/?viewAsMember=true" target="_blank">
                   <FaLinkedin className="footer-icon" />
                 </a>
               </div>
               <div className="flex-column">
                 <h4 className="footer-address">
-                  Copyright 2020 Pikfud. All Rights Reserved.
+                Copyright 2020 Pikfud. ყველა უფლება დაცულია.
                   <br />
-                  VAT number: 404600026.
+                  საინდეტიფიკაციო კოდი: 404600026.
                 </h4>
               </div>
             </Col>
             <Col>
               <div className="footer-Navbar">
-                <h4 className="footer-Navbar-title">Sitemap</h4>
+                <h4 className="footer-Navbar-title">ნავიგაცია</h4>
                 <Link
                   to="/"
                   onClick={() => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>Home</h4>
+                  <h4 style={{ color: "black" }}>მთავარი</h4>
                 </Link>
                 <Link
                   to="/aboutus"
@@ -60,7 +60,7 @@ const Footer = () => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>About Us</h4>
+                  <h4 style={{ color: "black" }}>ჩვენს შესახებ</h4>
                 </Link>
                 <Link
                   to="/business"
@@ -68,7 +68,7 @@ const Footer = () => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>Business</h4>
+                  <h4 style={{ color: "black" }}>ბიზნესი</h4>
                 </Link>
                 <Link
                   to="/blog"
@@ -76,7 +76,7 @@ const Footer = () => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>Blog</h4>
+                  <h4 style={{ color: "black" }}>ბლოგი</h4>
                 </Link>
                 <Link
                   to="/jobs"
@@ -84,7 +84,7 @@ const Footer = () => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>Jobs</h4>
+                  <h4 style={{ color: "black" }}>კარიერა</h4>
                 </Link>
               </div>
             </Col>
@@ -97,7 +97,7 @@ const Footer = () => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>Terms & Conditions</h4>
+                  <h4 style={{ color: "black" }}>წესები და პირობები</h4>
                 </Link>
                 <Link
                   to="/privacypolicy"
@@ -105,7 +105,7 @@ const Footer = () => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <h4 style={{ color: "black" }}>Privacy Policy</h4>
+                  <h4 style={{ color: "black" }}>კონფიდენციალურობის პოლიტიკა</h4>
                 </Link>
                 <Link
                   to="/cookiepolicy"
