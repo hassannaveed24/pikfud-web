@@ -7,6 +7,8 @@ import pickIt from "assets/Home/pickIt.png";
 import wastage from "assets/Home/wastage.png";
 import pizza from "assets/Home/pizza.jpg";
 import { Helmet } from "react-helmet";
+import appleStore from "../../assets/Footer/logo-app-store-brand-font-png-favpng-Gb5FcTZcrb9bRikX49s26mMVn1.png";
+import googlePlay from "../../assets/Footer/en_badge_web_generic1.png";
 
 const Home = () => {
   return (
@@ -17,8 +19,16 @@ const Home = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="HomeScreen1">
-        <div>
+        <div className="HomePicContainer">
           <img className="HomeScreen1-homePic" src={homePic} />
+          <div className="SocialIcons-HomeScreen">
+            <img
+              src={appleStore}
+              className="googlePlay"
+              style={{ marginBottom: "2rem" }}
+            />
+            <img src={googlePlay} className="googlePlay" />
+          </div>
         </div>
         <div>
           <h3 className="HomeScreen1-title">ეს მარტივია</h3>
@@ -30,26 +40,29 @@ const Home = () => {
           </div>
           <div className="">
             <img className=" HomeScreen1NavImg" src={rescueFood} />
-            <h4 className="HomeScreen1-nav">გადაარჩინე საკვები ნახევარ ფასად</h4>
+            <h4 className="HomeScreen1-nav">
+              გადაარჩინე საკვები ნახევარ ფასად
+            </h4>
           </div>
           <div className="">
             <img className=" HomeScreen1NavImg" src={pickIt} />
             <h4 className="HomeScreen1-nav">
-            თქვენი შეკვეთა წასაღებად მზად არის
+              თქვენი შეკვეთა წასაღებად მზად არის
             </h4>
           </div>
         </div>
       </div>
       {/* HomeScreen2 */}
       <div className="HomeScreen2">
-        <h1 className="HomeScreen2H4">
-        გადმოწერეთ აპლიკაცია და შეუკვეთეთ
-        </h1>
+        <h1 className="HomeScreen2H4">გადმოწერეთ აპლიკაცია და შეუკვეთეთ</h1>
         <h2 className="HomeScreen2Body">
-        ყოველ დღე, ჯანსაღი და ვარგისი საკვები კაფეებიდან, რესტორნებიდან, სასტუმროებიდან და მარკეტებიდან პირდაპირ ნაგავსაყრელებში პოულობენ ადგილს.
+          ყოველ დღე, ჯანსაღი და ვარგისი საკვები კაფეებიდან, რესტორნებიდან,
+          სასტუმროებიდან და მარკეტებიდან პირდაპირ ნაგავსაყრელებში პოულობენ
+          ადგილს.
           <br />
           <br />
-          ერთი მიზეზის გამო: რადგან დროზე რეალიზაცია ვერ მოხერხდა. პიკფუდთან ერთად თქვენ შეძლებთ ეს საკვები გადაარჩინოთ 50% ფასდაკლებით
+          ერთი მიზეზის გამო: რადგან დროზე რეალიზაცია ვერ მოხერხდა. პიკფუდთან
+          ერთად თქვენ შეძლებთ ეს საკვები გადაარჩინოთ 50% ფასდაკლებით
         </h2>
       </div>
 
@@ -62,20 +75,23 @@ const Home = () => {
             <h2 className="HomeScreen2WastageH2">
               წარმოებული ვარგისი საჭმლის 1/3 ნაგავში იყრება.
             </h2>
-            <h1 className="HomeScreen2WastageH1">მოდით ყველამ შევიტანოთ წვლილი ამ ვითარების გასაუმჯობესებლად.</h1>
+            <h1 className="HomeScreen2WastageH1">
+              მოდით ყველამ შევიტანოთ წვლილი ამ ვითარების გასაუმჯობესებლად.
+            </h1>
           </div>
         </div>
       </div>
 
       <div className="HomeScreen2">
-        <h1 className="HomeScreen2H4">
-          პიკფუდის მიზანი
-        </h1>
+        <h1 className="HomeScreen2H4">პიკფუდის მიზანი</h1>
         <h2 className="HomeScreen2Body">
-        Pikfud არის სტარტაპი, რომელსაც სურს საქართველოში შემოიტანოს ევროპაში უკვე გავრცელებული პრაქტიკა და შეამციროს საკვების გადაყრა, ამასთან ერთად კი მომხმარებელს გაუიაფოს პროდუქტი.
+          Pikfud არის სტარტაპი, რომელსაც სურს საქართველოში შემოიტანოს ევროპაში
+          უკვე გავრცელებული პრაქტიკა და შეამციროს საკვების გადაყრა, ამასთან
+          ერთად კი მომხმარებელს გაუიაფოს პროდუქტი.
           <br />
           <br />
-          თქვენ შეგეძლებათ აირჩიოთ თქვენთვის სასურველი, იყიდოთ 50% ფასდაკლებით, შემდეგ კი მიბრძანდეთ ლოკაციაზე და აიღოთ თქვენი შეძენილი პროდუქტი
+          თქვენ შეგეძლებათ აირჩიოთ თქვენთვის სასურველი, იყიდოთ 50% ფასდაკლებით,
+          შემდეგ კი მიბრძანდეთ ლოკაციაზე და აიღოთ თქვენი შეძენილი პროდუქტი
           <br />
           <br />
           {/* But that’s not the only problem. It takes a lot of land, energy and

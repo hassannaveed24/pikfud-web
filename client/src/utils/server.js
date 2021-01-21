@@ -1,5 +1,5 @@
 import axios from "axios";
-export const baseURL = "http://18.195.35.126";
+export const baseURL = "https://www.pikfudbackss.com/";
 // export const baseURL = "https://pikfudbackend.herokuapp.com";
 export const instance = axios.create({
   baseURL,
