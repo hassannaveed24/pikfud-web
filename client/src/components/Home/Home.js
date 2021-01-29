@@ -11,6 +11,10 @@ import appleStore from "../../assets/Footer/logo-app-store-brand-font-png-favpng
 import googlePlay from "../../assets/Footer/en_badge_web_generic1.png";
 
 const Home = () => {
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
   return (
     <>
       <Helmet>
@@ -27,7 +31,15 @@ const Home = () => {
               className="googlePlay"
               style={{ marginBottom: "2rem" }}
             />
-            <img src={googlePlay} className="googlePlay" />
+            <a
+              onClick={() =>
+                openInNewTab(
+                  "https://play.google.com/store/apps/details?id=com.pikfud"
+                )
+              }
+            >
+              <img src={googlePlay} className="googlePlay" />
+            </a>
           </div>
         </div>
         <div>
